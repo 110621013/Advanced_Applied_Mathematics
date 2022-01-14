@@ -134,7 +134,9 @@ def q3_correct_variationally_adjust(u, v, sd='double'): #強約束風場變分�
 
                 print(count, skip_flag, max_rela_e)
 
-                if max_rela_e < threshold:
+                #if max_rela_e < threshold:
+                #    break
+                if count == 4000:
                     break
             np.save('correct_double_lamb', lamb)
             print('correct double count:', count)
@@ -198,7 +200,9 @@ def q3_correct_variationally_adjust(u, v, sd='double'): #強約束風場變分�
 
                 print(count, skip_flag, max_rela_e)
 
-                if max_rela_e < threshold:
+                #if max_rela_e < threshold:
+                #    break
+                if count == 4000:
                     break
             np.save('correct_single_lamb', lamb)
             print('correct double count:', count)
@@ -263,7 +267,9 @@ def q6_wrong_variationally_adjust(u, v, sd='double'): #強約束風場變分調�
 
                 print(count, skip_flag, max_rela_e)
 
-                if max_rela_e < threshold:
+                #if max_rela_e < threshold:
+                #    break
+                if count == 4000:
                     break
             np.save('wrong_double_lamb', lamb)
             print('wrong double count:', count)
@@ -327,7 +333,9 @@ def q6_wrong_variationally_adjust(u, v, sd='double'): #強約束風場變分調�
 
                 print(count, skip_flag, max_rela_e)
 
-                if max_rela_e < threshold:
+                #if max_rela_e < threshold:
+                #    break
+                if count == 4000:
                     break
             np.save('wrong_single_lamb', lamb)
             print('wrong double count:', count)
@@ -394,10 +402,10 @@ def q3_cva_test(u, v, sd='double'): # mse test
 
                 print(count, skip_flag, mse)
 
-                if mse < mse_threshold:
-                    break
-                #if count > 30:
+                #if max_rela_e < threshold:
                 #    break
+                if count == 4000:
+                    break
             np.save('test_correct_double_lamb', lamb)
             print('test correct double count:', count)
 
